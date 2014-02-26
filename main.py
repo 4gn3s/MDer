@@ -1,8 +1,7 @@
 #-*- coding: utf-8 -*-
-import os
 import markdown2
 
-import traverser
+import file_manager as fileManager
 
 default_html_dir = "./posts_html"  # change name in gitignore
 default_assets_dir = "./assets"
@@ -10,13 +9,6 @@ default_assets_dir = "./assets"
 date_format = '%A, %B %d, %Y'
 
 markdowner = markdown2.Markdown()
-
-
-def no_html(target):
-    if not os.path.exists(target):
-        return True
-    # check if .md file changed in the meantime?
-    return False
 
 
 def md_to_html(md):
@@ -33,25 +25,20 @@ def md_to_html(md):
     return (title, html)
 
 
-def write_html(filename, html):
-    with open(filename, 'a') as t:
-        t.write(html)
-    print "saved as", filename
-
-
 def generate():
-    files = traverser.traverse('.')
-    md_files = traverser.filter_md(files)
+    files = fileManager.find_all_files('.')
+    md_files = fileManager.filter_extension(files, '.md')
     print ".md files:", md_files
+
     htmls = {}
-    if not os.path.exists(default_html_dir):
-        os.makedirs(default_html_dir)
+    fileManager.create_dir(default_html_dir)
+
     for md in md_files:
         html_filename = md[:-2] + 'html'
         full_filename = default_html_dir + "/" + html_filename
-        if no_html(full_filename):
+        if not fileManager.file_exists(full_filename):
             htmls[html_filename] = md_to_html(md)
-            write_html(full_filename, htmls[html_filename][1])
+            fileManager.write_to_file(full_filename, htmls[html_filename][1])
         else:
             print "file already exists"
         print "changed %x files; new blog posts:" % (len(htmls))
@@ -59,19 +46,6 @@ def generate():
             print "\t", post[0]
 
 
-def clean_all():
-    print "cleaning directory", default_html_dir
-    files = os.listdir(default_html_dir)
-    files = [default_html_dir + "/" + f for f in files]
-    n = len(files)
-    if n:
-        for f in files:
-            os.remove(f)
-        print "removed %x files" % (n)
-    else:
-        print "the directory is clean"
-
-
 if __name__ == "__main__":
-    clean_all()
+    fileManager.clean_all(default_html_dir)
     generate()
