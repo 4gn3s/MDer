@@ -1,10 +1,10 @@
+#-*- coding: utf-8 -*-
 import os
-import subprocess
 import markdown2
 
 import traverser
 
-default_html_dir = "./html"
+default_html_dir = "./posts_html"  # change name in gitignore
 default_assets_dir = "./assets"
 
 date_format = '%A, %B %d, %Y'
@@ -24,7 +24,13 @@ def md_to_html(md):
     with open(md, 'r') as md_file:
         md_content = md_file.read()
         html = markdowner.convert(md_content)
-    return html
+        md_content = md_content.split('\n')
+        title = filter(lambda line: line[:2] == '# ', md_content)
+        if title:
+            title = title[0].replace('# ', '')
+        else:
+            title = md[:-3]
+    return (title, html)
 
 
 def write_html(filename, html):
@@ -45,10 +51,12 @@ def generate():
         full_filename = default_html_dir + "/" + html_filename
         if no_html(full_filename):
             htmls[html_filename] = md_to_html(md)
-            write_html(full_filename, htmls[html_filename])
+            write_html(full_filename, htmls[html_filename][1])
         else:
             print "file already exists"
-        print "changed %x files" % (len(htmls))
+        print "changed %x files; new blog posts:" % (len(htmls))
+        for post in htmls.values():
+            print "\t", post[0]
 
 
 def clean_all():
@@ -56,9 +64,12 @@ def clean_all():
     files = os.listdir(default_html_dir)
     files = [default_html_dir + "/" + f for f in files]
     n = len(files)
-    for f in files:
-        os.remove(f)
-    print "removed %x files" % (n)
+    if n:
+        for f in files:
+            os.remove(f)
+        print "removed %x files" % (n)
+    else:
+        print "the directory is clean"
 
 
 if __name__ == "__main__":
