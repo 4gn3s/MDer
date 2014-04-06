@@ -1,58 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+
+
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="World">
     <meta name="author" content="4gn3s">
-    <link rel="shortcut icon" href="assets/bootstrap/ico/favicon.ico">
+    <title>CAD/CAM development BLOG</title>
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>TITLE</title>
+<!-- For all browsers -->
+<link rel="stylesheet" href="assets/css/main.min.css">
+<!-- Webfonts -->
+<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<meta http-equiv="cleartype" content="on">
 
-    <!-- Custom styles for this template -->
-    <link href="assets/blog.css" rel="stylesheet">
+<!-- Load Modernizr -->
+<script src="assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
 
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="assets/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="assets/favicon.png">
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
 
-  <body>
+  <body id="post-index" class="feature">
+    <div class="entry-header">
+      <div class="entry-image">
+      <img src="assets/images/abstract-4.jpg" alt="CAD/CAM development BLOG">
+    </div><!-- /.entry-image -->
+  <div class="header-title">
+    <div class="header-title-wrap">
+      <h1>CAD/CAM development BLOG</h1>
+      <h2>Master thesis work</h2>
+    </div><!-- /.header-title-wrap -->
+  </div><!-- /.header-title -->
+</div><!-- /.entry-header -->
 
-    <div class="blog-masthead">
-      <div class="container">
-        <nav class="blog-nav">
-          <a class="blog-nav-item active" href="#">Home</a>
-          <a class="blog-nav-item" href="#">About</a>
-        </nav>
-      </div>
-    </div>
-
-    <div class="container">
-
-      <div class="blog-header">
-        <h1 class="blog-title">The Bootstrap Blog</h1>
-        <p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p>
-      </div>
-
-      <div class="row">
-
-        <div class="col-sm-8 blog-main">
-
-        
+<div id="main" role="main">
+       
   
-  <div class="blog-post">
-  <h2 class="blog-post-title">Day 6</h2>
-    <p class="blog-post-meta">Sun Apr  6 08:15:15 2014 by <a href="#">4gn3s</a></p>
+<article class="hentry">
+  <header>
+    <div class="entry-meta"><span class="entry-date date published
+            updated"><time datetime="Sun Apr  6 09:48:32 2014"><a href="http://4gn3s.github.io/MDer/">Sun Apr  6 09:48:32 2014</a></time></span>
+        <span class="author vcard"><span class="fn"><a href="http://4gn3s.github.io/MDer/about.html" title="About 4gn3s">4gn3s</a></span></span></div><!-- /.entry-meta -->
+  </header>
+  <div class="entry-content">
+      <h1 id="title">Day 6</h1>
     
 
 <h3>Image sequence generator</h3>
@@ -80,21 +84,21 @@
 
 <p><strong><em>out data format:</em></strong></p>
 
-<p><code>
-    # pair 1
-point.x point.y
-point.x point.y
-...
-point.x point.y
-    # empty line
-    # pair 2
-point.x point.y
-point.x point.y
-..
-point.x point.y
-    # and so on
-</code>
-Decide on which detector to use:</p>
+<div class="codehilite"><pre><code>    <span class="c"># pair 1</span>
+<span class="n">point</span><span class="o">.</span><span class="n">x</span> <span class="n">point</span><span class="o">.</span><span class="n">y</span>
+<span class="n">point</span><span class="o">.</span><span class="n">x</span> <span class="n">point</span><span class="o">.</span><span class="n">y</span>
+<span class="o">...</span>
+<span class="n">point</span><span class="o">.</span><span class="n">x</span> <span class="n">point</span><span class="o">.</span><span class="n">y</span>
+    <span class="c"># empty line</span>
+    <span class="c"># pair 2</span>
+<span class="n">point</span><span class="o">.</span><span class="n">x</span> <span class="n">point</span><span class="o">.</span><span class="n">y</span>
+<span class="n">point</span><span class="o">.</span><span class="n">x</span> <span class="n">point</span><span class="o">.</span><span class="n">y</span>
+<span class="o">..</span>
+<span class="n">point</span><span class="o">.</span><span class="n">x</span> <span class="n">point</span><span class="o">.</span><span class="n">y</span>
+    <span class="c"># and so on</span>
+</code></pre></div>
+
+<p>Decide on which detector to use:</p>
 
 <ul>
 <li>SIFT
@@ -109,11 +113,17 @@ Decide on which detector to use:</p>
 </ul></li>
 </ul>
 
-  </div><!-- /.blog-post -->
-  
-  <div class="blog-post">
-  <h2 class="blog-post-title">Day 5</h2>
-    <p class="blog-post-meta">Fri Apr  4 09:25:20 2014 by <a href="#">4gn3s</a></p>
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    <div class="entry-meta"><span class="entry-date date published
+            updated"><time datetime="Sun Apr  6 09:48:32 2014"><a href="http://4gn3s.github.io/MDer/">Sun Apr  6 09:48:32 2014</a></time></span>
+        <span class="author vcard"><span class="fn"><a href="http://4gn3s.github.io/MDer/about.html" title="About 4gn3s">4gn3s</a></span></span></div><!-- /.entry-meta -->
+  </header>
+  <div class="entry-content">
+      <h1 id="title">Day 5</h1>
     
 
 <h3>Rebuilding Qt, VTK &amp; PCL due to nasty Qt and VTK paths</h3>
@@ -138,11 +148,17 @@ Decide on which detector to use:</p>
 
 <h2>...AND IT WORKS!</h2>
 
-  </div><!-- /.blog-post -->
-  
-  <div class="blog-post">
-  <h2 class="blog-post-title">Day 4 PCL build</h2>
-    <p class="blog-post-meta">Fri Apr  4 09:25:25 2014 by <a href="#">4gn3s</a></p>
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    <div class="entry-meta"><span class="entry-date date published
+            updated"><time datetime="Sun Apr  6 09:48:32 2014"><a href="http://4gn3s.github.io/MDer/">Sun Apr  6 09:48:32 2014</a></time></span>
+        <span class="author vcard"><span class="fn"><a href="http://4gn3s.github.io/MDer/about.html" title="About 4gn3s">4gn3s</a></span></span></div><!-- /.entry-meta -->
+  </header>
+  <div class="entry-content">
+      <h1 id="title">Day 4 PCL build</h1>
     
 
 <p>building without an app called: cloud composer</p>
@@ -156,11 +172,17 @@ Decide on which detector to use:</p>
 
 <p>Time Elapsed <em>01:33:18.95</em></p>
 
-  </div><!-- /.blog-post -->
-  
-  <div class="blog-post">
-  <h2 class="blog-post-title">Day 3</h2>
-    <p class="blog-post-meta">Fri Apr  4 09:25:10 2014 by <a href="#">4gn3s</a></p>
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    <div class="entry-meta"><span class="entry-date date published
+            updated"><time datetime="Sun Apr  6 09:48:32 2014"><a href="http://4gn3s.github.io/MDer/">Sun Apr  6 09:48:32 2014</a></time></span>
+        <span class="author vcard"><span class="fn"><a href="http://4gn3s.github.io/MDer/about.html" title="About 4gn3s">4gn3s</a></span></span></div><!-- /.entry-meta -->
+  </header>
+  <div class="entry-content">
+      <h1 id="title">Day 3</h1>
     
 
 <p>VTK 5 doesn't support Qt 5, so I have to build Qt 4.8 from sources (no x64 binaries are provided), following [that answer on SO]</p>
@@ -213,11 +235,17 @@ BUILD_SHARED_LIBS
 
 <p>All the errors are of PCL_CC_<em>SOMETHING</em>, hopefully I'm not gonna need that. (<strong>CloudCompare?</strong> - of so, not suprising, I haven't installed that)</p>
 
-  </div><!-- /.blog-post -->
-  
-  <div class="blog-post">
-  <h2 class="blog-post-title">Day 2</h2>
-    <p class="blog-post-meta">Fri Apr  4 09:25:17 2014 by <a href="#">4gn3s</a></p>
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    <div class="entry-meta"><span class="entry-date date published
+            updated"><time datetime="Sun Apr  6 09:48:32 2014"><a href="http://4gn3s.github.io/MDer/">Sun Apr  6 09:48:32 2014</a></time></span>
+        <span class="author vcard"><span class="fn"><a href="http://4gn3s.github.io/MDer/about.html" title="About 4gn3s">4gn3s</a></span></span></div><!-- /.entry-meta -->
+  </header>
+  <div class="entry-content">
+      <h1 id="title">Day 2</h1>
     
 
 <p>trying to solve problems with <strong>flann</strong>:</p>
@@ -263,11 +291,17 @@ and changing <code>QT_DIR</code> after install</li>
 <p>OK, it seems that PCL doesn't support VTK v.6 :(
 So again I will have to download the sources and build VTK...</p>
 
-  </div><!-- /.blog-post -->
-  
-  <div class="blog-post">
-  <h2 class="blog-post-title">Day 1</h2>
-    <p class="blog-post-meta">Fri Mar  7 10:15:14 2014 by <a href="#">4gn3s</a></p>
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    <div class="entry-meta"><span class="entry-date date published
+            updated"><time datetime="Sun Apr  6 09:48:32 2014"><a href="http://4gn3s.github.io/MDer/">Sun Apr  6 09:48:32 2014</a></time></span>
+        <span class="author vcard"><span class="fn"><a href="http://4gn3s.github.io/MDer/about.html" title="About 4gn3s">4gn3s</a></span></span></div><!-- /.entry-meta -->
+  </header>
+  <div class="entry-content">
+      <h1 id="title">Day 1</h1>
     
 
 <h2>an attempt to build PLC on Windows 7 with Vs2012</h2>
@@ -293,11 +327,17 @@ installing in <em>C:\Program Files\VTK 6.1.0</em></li>
 
 <p>Overall result: unsuccessful; flann build causes errors (in syntax?!)</p>
 
-  </div><!-- /.blog-post -->
-  
-  <div class="blog-post">
-  <h2 class="blog-post-title">Day 0</h2>
-    <p class="blog-post-meta">Fri Mar  7 08:11:14 2014 by <a href="#">4gn3s</a></p>
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    <div class="entry-meta"><span class="entry-date date published
+            updated"><time datetime="Sun Apr  6 09:48:32 2014"><a href="http://4gn3s.github.io/MDer/">Sun Apr  6 09:48:32 2014</a></time></span>
+        <span class="author vcard"><span class="fn"><a href="http://4gn3s.github.io/MDer/about.html" title="About 4gn3s">4gn3s</a></span></span></div><!-- /.entry-meta -->
+  </header>
+  <div class="entry-content">
+      <h1 id="title">Day 0</h1>
     
 
 <h2>Project title: <strong>The estimation of 3D geometry of objects from multiple view images</strong></h2>
@@ -308,66 +348,21 @@ installing in <em>C:\Program Files\VTK 6.1.0</em></li>
 
 <p>Also collect useful links, papers, source code.</p>
 
-  </div><!-- /.blog-post -->
-  
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
 
 
-          <ul class="pager">
-            <li><a href="#">Previous</a></li>
-            <li><a href="#">Next</a></li>
-          </ul>
+</div><!-- /#main -->
 
-        </div><!-- /.blog-main -->
-
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-          <div class="sidebar-module sidebar-module-inset">
-            <h4>About</h4>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-          </div>
-<!--           <div class="sidebar-module">
-            <h4>Archives</h4>
-            <ol class="list-unstyled">
-              <li><a href="#">January 2014</a></li>
-              <li><a href="#">December 2013</a></li>
-              <li><a href="#">November 2013</a></li>
-              <li><a href="#">October 2013</a></li>
-              <li><a href="#">September 2013</a></li>
-              <li><a href="#">August 2013</a></li>
-              <li><a href="#">July 2013</a></li>
-              <li><a href="#">June 2013</a></li>
-              <li><a href="#">May 2013</a></li>
-              <li><a href="#">April 2013</a></li>
-              <li><a href="#">March 2013</a></li>
-              <li><a href="#">February 2013</a></li>
-            </ol>
-          </div>
-          <div class="sidebar-module">
-            <h4>Elsewhere</h4>
-            <ol class="list-unstyled">
-              <li><a href="#">GitHub</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Facebook</a></li>
-            </ol>
-          </div> -->
-        </div><!-- /.blog-sidebar -->
-
-      </div><!-- /.row -->
-
-    </div><!-- /.container -->
-
-    <div class="blog-footer">
-      <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-      <p>
-        <a href="#">Back to top</a>
-      </p>
-    </div>
+<div class="footer-wrapper">
+  <span> Based on <b><a href="https://github.com/mmistakes/hpstr-jekyll-theme">Jekyll
+        HPSTR theme</a></b> by 4gn3s, <i>2014</i></span>
+</div><!-- /.footer-wrapper -->
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/bootstrap/js/docs.min.js"></script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="assets/js/scripts.min.js"></script>
   </body>
 </html>
