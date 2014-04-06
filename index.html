@@ -1,78 +1,373 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Mder by 4gn3s</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="World">
+    <meta name="author" content="4gn3s">
+    <link rel="shortcut icon" href="assets/bootstrap/ico/favicon.ico">
+
+    <title>TITLE</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/blog.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
   </head>
+
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/4gn3s/MDer">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/4gn3s/MDer/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/4gn3s/MDer/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item active" href="#">Home</a>
+          <a class="blog-nav-item" href="#">About</a>
         </nav>
-      </div><!-- end header -->
+      </div>
+    </div>
 
-    <div class="wrapper">
+    <div class="container">
 
-      <section>
-        <div id="title">
-          <h1>Mder</h1>
-          <p>transform .md files to a static html site</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/4gn3s">4gn3s</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
+      <div class="blog-header">
+        <h1 class="blog-title">The Bootstrap Blog</h1>
+        <p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p>
+      </div>
 
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+      <div class="row">
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+        <div class="col-sm-8 blog-main">
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+        
+  
+  <div class="blog-post">
+  <h2 class="blog-post-title">Day 6</h2>
+    <p class="blog-post-meta">Sun Apr  6 08:15:15 2014 by <a href="#">4gn3s</a></p>
+    
+
+<h3>Image sequence generator</h3>
+
+<p>Generating images of a cube given its:</p>
+
+<ul>
+<li>size</li>
+<li>rotation angle</li>
+<li>rotation axis</li>
+</ul>
+
+<p>toggling menu - <em>left mouse button</em></p>
+
+<h3>Class structure for <em>matching</em></h3>
+
+<p><strong>input:</strong> series of images</p>
+
+<p><strong>output:</strong> </p>
+
+<ul>
+<li>matched points saved to a text file</li>
+<li>image pairs viewed/ saved with matches drawn</li>
+</ul>
+
+<p><strong><em>out data format:</em></strong></p>
+
+<p><code>
+    # pair 1
+point.x point.y
+point.x point.y
+...
+point.x point.y
+    # empty line
+    # pair 2
+point.x point.y
+point.x point.y
+..
+point.x point.y
+    # and so on
+</code>
+Decide on which detector to use:</p>
+
+<ul>
+<li>SIFT
+<ul>
+<li>slow</li>
+<li>nice results</li>
+</ul></li>
+<li>SURF
+<ul>
+<li>fast</li>
+<li>crappy</li>
+</ul></li>
+</ul>
+
+  </div><!-- /.blog-post -->
+  
+  <div class="blog-post">
+  <h2 class="blog-post-title">Day 5</h2>
+    <p class="blog-post-meta">Fri Apr  4 09:25:20 2014 by <a href="#">4gn3s</a></p>
+    
+
+<h3>Rebuilding Qt, VTK &amp; PCL due to nasty Qt and VTK paths</h3>
+
+<p>also installed new Python 3.4 with:</p>
+
+<ul>
+<li>pygame</li>
+<li>numpy</li>
+<li>scipy</li>
+<li>matplotlib</li>
+<li>ipython</li>
+</ul>
+
+<h4>Build times:</h4>
+
+<ul>
+<li>QT 4.8: approx. 3h</li>
+<li>VTK 5.1: debug 00:38:32.05 + release 00:37:14.57</li>
+<li>PCL 1.7: debug 01:08:52.98 + release 01:33:23.84</li>
+</ul>
+
+<h2>...AND IT WORKS!</h2>
+
+  </div><!-- /.blog-post -->
+  
+  <div class="blog-post">
+  <h2 class="blog-post-title">Day 4 PCL build</h2>
+    <p class="blog-post-meta">Fri Apr  4 09:25:25 2014 by <a href="#">4gn3s</a></p>
+    
+
+<p>building without an app called: cloud composer</p>
+
+<h2>FINALLY!!</h2>
+
+<p>Release:</p>
+
+<pre><code>========== Build: 148 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>Time Elapsed <em>01:33:18.95</em></p>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+  </div><!-- /.blog-post -->
+  
+  <div class="blog-post">
+  <h2 class="blog-post-title">Day 3</h2>
+    <p class="blog-post-meta">Fri Apr  4 09:25:10 2014 by <a href="#">4gn3s</a></p>
     
+
+<p>VTK 5 doesn't support Qt 5, so I have to build Qt 4.8 from sources (no x64 binaries are provided), following [that answer on SO]</p>
+
+<h4>This is starting to get silly</h4>
+
+<p>next building VTK 5 in debug (time: <em>00:44:56.22</em>) &amp; release (time: <em>00:37:25.25</em>) and I'm like
+<img src="http://i.imgur.com/Yf0tR4v.gif" alt="waiting" title="Waiting..." /></p>
+
+<p>OK, and so we go to PCL.
+While opening the project in VS it loads for about 10 minutes or so, that's why: 
+<img src="http://i.imgur.com/BTW1lcA.png" alt="long loading" title="Long loading PCL solution" /></p>
+
+<p>Problems:</p>
+
+<ol>
+<li>CMake Eigen path incorrect</li>
+<li>CMake flann path pointing to x86 flann</li>
+<li><em>serialization.h</em> x64 bug in PCL again (probably will be solved by linking the correct version of flann)</li>
+</ol>
+
+<p>Can't build some apps because of QVTK missing,
+seems that to have QVTK you not only need to build VTK with Qt, but also set following variables to true:</p>
+
+<pre><code>VTK_USE_QT 
+VTK_USE_GUISUPPORT
+BUILD_SHARED_LIBS
+</code></pre>
+
+<h3>Great, so we're building VTK yet <em>again</em></h3>
+
+<ul>
+<li>debug: <em>03:57:27.99</em> ok just kidding, went to lunch in the meantime</li>
+<li>release: <em>00:39:18.70</em></li>
+</ul>
+
+<h2>Building PCL:</h2>
+
+<ul>
+<li>debug <em>01:12:06.28</em></li>
+</ul>
+
+<p><img src="http://i.imgur.com/NuTqavy.png" alt="errors debug" title="Errors in debug build" /></p>
+
+<ul>
+<li>release <em>much longer</em></li>
+</ul>
+
+<p><img src="http://i.imgur.com/WsPvSIl.png" alt="errors release" title="Errors in release build" /></p>
+
+<p>All the errors are of PCL_CC_<em>SOMETHING</em>, hopefully I'm not gonna need that. (<strong>CloudCompare?</strong> - of so, not suprising, I haven't installed that)</p>
+
+  </div><!-- /.blog-post -->
+  
+  <div class="blog-post">
+  <h2 class="blog-post-title">Day 2</h2>
+    <p class="blog-post-meta">Fri Apr  4 09:25:17 2014 by <a href="#">4gn3s</a></p>
+    
+
+<p>trying to solve problems with <strong>flann</strong>:</p>
+
+<ul>
+<li>cmake using x32 generator (why? in x64 I keep getting <em>left of '.serialize' must have class/struct/union</em>);</li>
+<li>disabled python and matlab bindings;</li>
+<li>in VS unbinded all projects with pyunit in name;</li>
+<li>to build INSTALL in release run VS as administrator, otherwise errors</li>
+</ul>
+
+<p>update: managed to build x64 flann by adding:</p>
+
+<pre><code>#ifdef _MSC_VER
+BASIC_TYPE_SERIALIZER(unsigned __int64);
+#endif
+</code></pre>
+
+<p>to <em>serialize.h</em>, as described in <a href="https://github.com/mariusmuja/flann/issues/82">here</a></p>
+
+<h2>CMake-ing PCL (version: pull request with OpenNI2 support):</h2>
+
+<ol>
+<li>error: <em>Unable to find the requested Boost libraries.</em>
+WTF?? Installed using binaries provided and it can't find it?!
+-> fixed by setting env. variable <code>BOOST_LIBRARYDIR</code></li>
+<li>error: <em>Could NOT find Eigen (missing: EIGEN_INCLUDE_DIR)</em>
+-> set <code>EIGEN_INCLUDE_DIR</code></li>
+<li>build Qhull from sources &amp; set <code>QHULL_INCLUDE_DIR</code>, <code>QHULL_LIBRARY</code></li>
+<li>error: <em>CMake Error at C:/Qt/qt-5.1.1-x86-msvc2012-opengl/qt-5.1.1-x86-msvc2012-opengl/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake:16 (message): Failed to find "glu32" in "".</em>
+-> added <code>CMAKE_PREFIX_PATH</code> = â€śC:\Program Files (x86)\Windows Kits\8.0\Lib\win8\um\x64â€ť)'</li>
+<li>still <em>VTK not found.</em>. But for the first time <strong>no ERRORS!</strong>
+no option other than to build VTK myself; it can'e be that easy: VTK doesn't work with QT5
+-> solved by changing <code>VTK_QT_VERSION</code> cmake option from 4 to 5. (â€śAdvancedâ€ť to show this option)
+OH GREAT, but I have Qt x32, and VTK wants x64->downloading binary <code>qt-opensource-windows-x86-msvc2012_64_opengl-5.2.1</code>
+and changing <code>QT_DIR</code> after install</li>
+</ol>
+
+<h2>Building PCL</h2>
+
+<p>176 errors, canceled build after ~45 mins.</p>
+
+<p>OK, it seems that PCL doesn't support VTK v.6 :(
+So again I will have to download the sources and build VTK...</p>
+
+  </div><!-- /.blog-post -->
+  
+  <div class="blog-post">
+  <h2 class="blog-post-title">Day 1</h2>
+    <p class="blog-post-meta">Fri Mar  7 10:15:14 2014 by <a href="#">4gn3s</a></p>
+    
+
+<h2>an attempt to build PLC on Windows 7 with Vs2012</h2>
+
+<p>starting <a href="http\://cs.unc.edu/~kwaegel/pcl/pcl_build_notes.html">here</a> and <a href="http\://pointclouds.org/documentation/tutorials/compiling_pcl_windows.php#compiling-pcl-windows">here</a></p>
+
+<h5>list of dependencies:</h5>
+
+<ul>
+<li><strong>cmake</strong> 2.8.11.2 already installed</li>
+<li><strong>boost</strong> 1.55.0 downloading binary from <a href="http\://sourceforge.net/projects/boost/files/boost-binaries/1.55.0-build2/boost_1_55_0-msvc-11.0-64.exe/download">here</a>; installed in <em>C:\local\boost_1_55_0</em>
+<ul>
+<li>to link in vs use <a href="C\:/local/boost_1_55_0/more/getting_started/windows.html">this</a></li>
+</ul></li>
+<li><strong>qhull</strong> extracted to <em>C:\local\qhull-2012.1</em>, binaries already provided</li>
+<li><strong>eigen</strong> extracted to <em>C:\local\eigen</em>, no need to build</li>
+<li><strong>flann</strong></li>
+<li><strong>Qt</strong> 5.1.1. with opnegl alfready here</li>
+<li><strong>VTK</strong> 6.1.0 x64 binary downloaded from <a href="http://www.vtk.org/VTK/resources/software.html">here</a>
+installing in <em>C:\Program Files\VTK 6.1.0</em></li>
+<li><strong>OpenNI2</strong> already installed</li>
+</ul>
+
+<p>Overall result: unsuccessful; flann build causes errors (in syntax?!)</p>
+
+  </div><!-- /.blog-post -->
+  
+  <div class="blog-post">
+  <h2 class="blog-post-title">Day 0</h2>
+    <p class="blog-post-meta">Fri Mar  7 08:11:14 2014 by <a href="#">4gn3s</a></p>
+    
+
+<h2>Project title: <strong>The estimation of 3D geometry of objects from multiple view images</strong></h2>
+
+<h4>Warsaw University of Technology, Computer Science</h4>
+
+<p>I'm going to make notes here about my progess including configuration, algorithms, implementation details etc.</p>
+
+<p>Also collect useful links, papers, source code.</p>
+
+  </div><!-- /.blog-post -->
+  
+
+
+          <ul class="pager">
+            <li><a href="#">Previous</a></li>
+            <li><a href="#">Next</a></li>
+          </ul>
+
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+          </div>
+<!--           <div class="sidebar-module">
+            <h4>Archives</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">January 2014</a></li>
+              <li><a href="#">December 2013</a></li>
+              <li><a href="#">November 2013</a></li>
+              <li><a href="#">October 2013</a></li>
+              <li><a href="#">September 2013</a></li>
+              <li><a href="#">August 2013</a></li>
+              <li><a href="#">July 2013</a></li>
+              <li><a href="#">June 2013</a></li>
+              <li><a href="#">May 2013</a></li>
+              <li><a href="#">April 2013</a></li>
+              <li><a href="#">March 2013</a></li>
+              <li><a href="#">February 2013</a></li>
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ol>
+          </div> -->
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    <div class="blog-footer">
+      <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/bootstrap/js/docs.min.js"></script>
   </body>
 </html>
