@@ -1,0 +1,24 @@
+{% extends "index.html" %}
+
+{% set page_title = page_title %}
+{% set meta_author = meta_author %}
+{% set meta_description = meta_description %}
+{% set site_url = site_url %}
+
+{% block content %}
+  {% for post in posts %}
+<article class="hentry">
+  <header>
+    <div class="entry-meta"><span class="entry-date date published
+            updated"><time datetime="{{ post.date }}"><a href="{{ site_url }}{{ post.url }}">{{ post.date }}</a></time></span>
+        <span class="author vcard"><span class="fn"><a href="{{ site_url
+                    }}about.html" title="About {{ post.author }}">{{ post.author
+                    }}</a></span></span></div><!-- /.entry-meta -->
+  </header>
+  <div class="entry-content">
+      <h1 id="title">{{ post.title }}</h1>
+    {{ post.content }}
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+{% endfor %}
+{% endblock %}
