@@ -2,62 +2,123 @@
 
 <!doctype html>
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="World">
-    <meta name="author" content="4gn3s">
-    <title>CAD/CAM development BLOG</title>
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+    <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+      <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+        <head>
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="description" content="World">
+          <meta name="author" content="4gn3s">
+          <title>CAD/CAM development BLOG</title>
+          <meta name="HandheldFriendly" content="True">
+          <meta name="MobileOptimized" content="320">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- For all browsers -->
-<link rel="stylesheet" href="assets/css/main.min.css">
-<!-- Webfonts -->
-<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+          <!-- For all browsers -->
+          <link rel="stylesheet" href="assets/css/main.min.css">
+          <!-- Webfonts -->
+          <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
 
-<meta http-equiv="cleartype" content="on">
+          <meta http-equiv="cleartype" content="on">
 
-<!-- Load Modernizr -->
-<script src="assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+          <!-- Load Modernizr -->
+          <script src="assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
 
-<!-- Icons -->
-<!-- 16x16 -->
-<link rel="shortcut icon" href="assets/favicon.ico">
-<!-- 32x32 -->
-<link rel="shortcut icon" href="assets/favicon.png">
+          <!-- Icons -->
+          <!-- 16x16 -->
+          <link rel="shortcut icon" href="assets/favicon.ico">
+          <!-- 32x32 -->
+          <link rel="shortcut icon" href="assets/favicon.png">
 
-  </head>
+        </head>
 
-  <body id="post-index" class="feature">
-    <div class="entry-header">
-      <div class="entry-image">
-      <img src="assets/images/abstract-4.jpg" alt="CAD/CAM development BLOG">
-    </div><!-- /.entry-image -->
-  <div class="header-title">
-    <div class="header-title-wrap">
-      <h1>CAD/CAM development BLOG</h1>
-      <h2>Master thesis work</h2>
-    </div><!-- /.header-title-wrap -->
-  </div><!-- /.header-title -->
-</div><!-- /.entry-header -->
+        <body id="post-index" class="feature">
+          <div class="entry-header">
+            <div class="entry-image">
+              <img src="assets/images/abstract-4.jpg" alt="CAD/CAM development BLOG">
+            </div><!-- /.entry-image -->
+            <div class="header-title">
+              <div class="header-title-wrap">
+                <h1>CAD/CAM development BLOG</h1>
+                <h2>Master thesis work</h2>
+              </div><!-- /.header-title-wrap -->
+            </div><!-- /.header-title -->
+          </div><!-- /.entry-header -->
 
-<div id="main" role="main">
-       
-  
-<article class="hentry">
-  <header>
-    <div class="entry-meta"><span class="entry-date date published
-            updated"><time datetime="Sun Apr  6 09:48:32 2014"><a href="http://4gn3s.github.io/MDer/">Sun Apr  6 09:48:32 2014</a></time></span>
-        <span class="author vcard"><span class="fn"><a href="http://4gn3s.github.io/MDer/about.html" title="About 4gn3s">4gn3s</a></span></span></div><!-- /.entry-meta -->
-  </header>
-  <div class="entry-content">
-      <h1 id="title">Day 6</h1>
-    
+          <div id="main" role="main">
+            
+
+    <article class="hentry">
+        <header>
+            <div class="entry-meta">
+                <span class="entry-date date published updated">
+                    <time datetime="Thu Aug 14 16:47:46 2014">
+                    <a href="http://4gn3s.github.io/MDer/">Thu Aug 14 16:47:46 2014</a>
+                    </time>
+                </span>
+                <span class="author vcard">
+                    <span class="fn">
+                        <a href="http://4gn3s.github.io/MDer/about.html" title="About 4gn3s">4gn3s</a>
+                    </span>
+                </span>
+            </div><!-- /.entry-meta -->
+        </header>
+        <div class="entry-content">
+            <h1 id="title">Days 7-8</h1>
+            
+
+<p>Created the project in VS2012. Linked Qt 5.3 x64 with OpenGL and OpenCV.</p>
+
+<h3>Work completed:</h3>
+
+<ul>
+<li>Some GUI</li>
+<li>Loading a series of images from a directory</li>
+<li><p>Matching class structure:</p>
+
+<ul>
+<li><em>ImageInfo</em> class, that contains a single image with its keypoints,
+desriptors etc.</li>
+<li><p><em>Matcher</em> class, that performs feature detection and matching and
+creates debug images.</p>
+
+<p><strong>Maybe change FlannBasedMatcher for BruteForce later. Also Add SIFT.
+Work on tests that filter out some of the connections.</strong></p></li>
+</ul></li>
+</ul>
+
+<h3>TODO NEXT:</h3>
+
+<ul>
+<li>Output matching results to file</li>
+<li>View debug matching results in one of the tabs</li>
+<li>CREATE POINT CLOUD</li>
+</ul>
+
+<p><img src="assets/images/day78.png" alt="screen" /></p>
+
+        </div><!-- /.entry-content -->
+    </article><!-- /.hentry -->
+
+    <article class="hentry">
+        <header>
+            <div class="entry-meta">
+                <span class="entry-date date published updated">
+                    <time datetime="Sun Apr  6 09:48:32 2014">
+                    <a href="http://4gn3s.github.io/MDer/">Sun Apr  6 09:48:32 2014</a>
+                    </time>
+                </span>
+                <span class="author vcard">
+                    <span class="fn">
+                        <a href="http://4gn3s.github.io/MDer/about.html" title="About 4gn3s">4gn3s</a>
+                    </span>
+                </span>
+            </div><!-- /.entry-meta -->
+        </header>
+        <div class="entry-content">
+            <h1 id="title">Day 6</h1>
+            
 
 <h3>Image sequence generator</h3>
 
@@ -113,18 +174,27 @@
 </ul></li>
 </ul>
 
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
+        </div><!-- /.entry-content -->
+    </article><!-- /.hentry -->
 
-<article class="hentry">
-  <header>
-    <div class="entry-meta"><span class="entry-date date published
-            updated"><time datetime="Sun Apr  6 09:48:32 2014"><a href="http://4gn3s.github.io/MDer/">Sun Apr  6 09:48:32 2014</a></time></span>
-        <span class="author vcard"><span class="fn"><a href="http://4gn3s.github.io/MDer/about.html" title="About 4gn3s">4gn3s</a></span></span></div><!-- /.entry-meta -->
-  </header>
-  <div class="entry-content">
-      <h1 id="title">Day 5</h1>
-    
+    <article class="hentry">
+        <header>
+            <div class="entry-meta">
+                <span class="entry-date date published updated">
+                    <time datetime="Sun Apr  6 09:48:32 2014">
+                    <a href="http://4gn3s.github.io/MDer/">Sun Apr  6 09:48:32 2014</a>
+                    </time>
+                </span>
+                <span class="author vcard">
+                    <span class="fn">
+                        <a href="http://4gn3s.github.io/MDer/about.html" title="About 4gn3s">4gn3s</a>
+                    </span>
+                </span>
+            </div><!-- /.entry-meta -->
+        </header>
+        <div class="entry-content">
+            <h1 id="title">Day 5</h1>
+            
 
 <h3>Rebuilding Qt, VTK &amp; PCL due to nasty Qt and VTK paths</h3>
 
@@ -148,18 +218,27 @@
 
 <h2>...AND IT WORKS!</h2>
 
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
+        </div><!-- /.entry-content -->
+    </article><!-- /.hentry -->
 
-<article class="hentry">
-  <header>
-    <div class="entry-meta"><span class="entry-date date published
-            updated"><time datetime="Sun Apr  6 09:48:32 2014"><a href="http://4gn3s.github.io/MDer/">Sun Apr  6 09:48:32 2014</a></time></span>
-        <span class="author vcard"><span class="fn"><a href="http://4gn3s.github.io/MDer/about.html" title="About 4gn3s">4gn3s</a></span></span></div><!-- /.entry-meta -->
-  </header>
-  <div class="entry-content">
-      <h1 id="title">Day 4 PCL build</h1>
-    
+    <article class="hentry">
+        <header>
+            <div class="entry-meta">
+                <span class="entry-date date published updated">
+                    <time datetime="Sun Apr  6 09:48:32 2014">
+                    <a href="http://4gn3s.github.io/MDer/">Sun Apr  6 09:48:32 2014</a>
+                    </time>
+                </span>
+                <span class="author vcard">
+                    <span class="fn">
+                        <a href="http://4gn3s.github.io/MDer/about.html" title="About 4gn3s">4gn3s</a>
+                    </span>
+                </span>
+            </div><!-- /.entry-meta -->
+        </header>
+        <div class="entry-content">
+            <h1 id="title">Day 4 PCL build</h1>
+            
 
 <p>building without an app called: cloud composer</p>
 
@@ -172,18 +251,27 @@
 
 <p>Time Elapsed <em>01:33:18.95</em></p>
 
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
+        </div><!-- /.entry-content -->
+    </article><!-- /.hentry -->
 
-<article class="hentry">
-  <header>
-    <div class="entry-meta"><span class="entry-date date published
-            updated"><time datetime="Sun Apr  6 09:48:32 2014"><a href="http://4gn3s.github.io/MDer/">Sun Apr  6 09:48:32 2014</a></time></span>
-        <span class="author vcard"><span class="fn"><a href="http://4gn3s.github.io/MDer/about.html" title="About 4gn3s">4gn3s</a></span></span></div><!-- /.entry-meta -->
-  </header>
-  <div class="entry-content">
-      <h1 id="title">Day 3</h1>
-    
+    <article class="hentry">
+        <header>
+            <div class="entry-meta">
+                <span class="entry-date date published updated">
+                    <time datetime="Sun Apr  6 09:48:32 2014">
+                    <a href="http://4gn3s.github.io/MDer/">Sun Apr  6 09:48:32 2014</a>
+                    </time>
+                </span>
+                <span class="author vcard">
+                    <span class="fn">
+                        <a href="http://4gn3s.github.io/MDer/about.html" title="About 4gn3s">4gn3s</a>
+                    </span>
+                </span>
+            </div><!-- /.entry-meta -->
+        </header>
+        <div class="entry-content">
+            <h1 id="title">Day 3</h1>
+            
 
 <p>VTK 5 doesn't support Qt 5, so I have to build Qt 4.8 from sources (no x64 binaries are provided), following [that answer on SO]</p>
 
@@ -235,18 +323,27 @@ BUILD_SHARED_LIBS
 
 <p>All the errors are of PCL_CC_<em>SOMETHING</em>, hopefully I'm not gonna need that. (<strong>CloudCompare?</strong> - of so, not suprising, I haven't installed that)</p>
 
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
+        </div><!-- /.entry-content -->
+    </article><!-- /.hentry -->
 
-<article class="hentry">
-  <header>
-    <div class="entry-meta"><span class="entry-date date published
-            updated"><time datetime="Sun Apr  6 09:48:32 2014"><a href="http://4gn3s.github.io/MDer/">Sun Apr  6 09:48:32 2014</a></time></span>
-        <span class="author vcard"><span class="fn"><a href="http://4gn3s.github.io/MDer/about.html" title="About 4gn3s">4gn3s</a></span></span></div><!-- /.entry-meta -->
-  </header>
-  <div class="entry-content">
-      <h1 id="title">Day 2</h1>
-    
+    <article class="hentry">
+        <header>
+            <div class="entry-meta">
+                <span class="entry-date date published updated">
+                    <time datetime="Sun Apr  6 09:48:32 2014">
+                    <a href="http://4gn3s.github.io/MDer/">Sun Apr  6 09:48:32 2014</a>
+                    </time>
+                </span>
+                <span class="author vcard">
+                    <span class="fn">
+                        <a href="http://4gn3s.github.io/MDer/about.html" title="About 4gn3s">4gn3s</a>
+                    </span>
+                </span>
+            </div><!-- /.entry-meta -->
+        </header>
+        <div class="entry-content">
+            <h1 id="title">Day 2</h1>
+            
 
 <p>trying to solve problems with <strong>flann</strong>:</p>
 
@@ -291,18 +388,27 @@ and changing <code>QT_DIR</code> after install</li>
 <p>OK, it seems that PCL doesn't support VTK v.6 :(
 So again I will have to download the sources and build VTK...</p>
 
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
+        </div><!-- /.entry-content -->
+    </article><!-- /.hentry -->
 
-<article class="hentry">
-  <header>
-    <div class="entry-meta"><span class="entry-date date published
-            updated"><time datetime="Sun Apr  6 09:48:32 2014"><a href="http://4gn3s.github.io/MDer/">Sun Apr  6 09:48:32 2014</a></time></span>
-        <span class="author vcard"><span class="fn"><a href="http://4gn3s.github.io/MDer/about.html" title="About 4gn3s">4gn3s</a></span></span></div><!-- /.entry-meta -->
-  </header>
-  <div class="entry-content">
-      <h1 id="title">Day 1</h1>
-    
+    <article class="hentry">
+        <header>
+            <div class="entry-meta">
+                <span class="entry-date date published updated">
+                    <time datetime="Sun Apr  6 09:48:32 2014">
+                    <a href="http://4gn3s.github.io/MDer/">Sun Apr  6 09:48:32 2014</a>
+                    </time>
+                </span>
+                <span class="author vcard">
+                    <span class="fn">
+                        <a href="http://4gn3s.github.io/MDer/about.html" title="About 4gn3s">4gn3s</a>
+                    </span>
+                </span>
+            </div><!-- /.entry-meta -->
+        </header>
+        <div class="entry-content">
+            <h1 id="title">Day 1</h1>
+            
 
 <h2>an attempt to build PLC on Windows 7 with Vs2012</h2>
 
@@ -327,18 +433,27 @@ installing in <em>C:\Program Files\VTK 6.1.0</em></li>
 
 <p>Overall result: unsuccessful; flann build causes errors (in syntax?!)</p>
 
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
+        </div><!-- /.entry-content -->
+    </article><!-- /.hentry -->
 
-<article class="hentry">
-  <header>
-    <div class="entry-meta"><span class="entry-date date published
-            updated"><time datetime="Sun Apr  6 09:48:32 2014"><a href="http://4gn3s.github.io/MDer/">Sun Apr  6 09:48:32 2014</a></time></span>
-        <span class="author vcard"><span class="fn"><a href="http://4gn3s.github.io/MDer/about.html" title="About 4gn3s">4gn3s</a></span></span></div><!-- /.entry-meta -->
-  </header>
-  <div class="entry-content">
-      <h1 id="title">Day 0</h1>
-    
+    <article class="hentry">
+        <header>
+            <div class="entry-meta">
+                <span class="entry-date date published updated">
+                    <time datetime="Sun Apr  6 09:48:32 2014">
+                    <a href="http://4gn3s.github.io/MDer/">Sun Apr  6 09:48:32 2014</a>
+                    </time>
+                </span>
+                <span class="author vcard">
+                    <span class="fn">
+                        <a href="http://4gn3s.github.io/MDer/about.html" title="About 4gn3s">4gn3s</a>
+                    </span>
+                </span>
+            </div><!-- /.entry-meta -->
+        </header>
+        <div class="entry-content">
+            <h1 id="title">Day 0</h1>
+            
 
 <h2>Project title: <strong>The estimation of 3D geometry of objects from multiple view images</strong></h2>
 
@@ -348,21 +463,21 @@ installing in <em>C:\Program Files\VTK 6.1.0</em></li>
 
 <p>Also collect useful links, papers, source code.</p>
 
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
+        </div><!-- /.entry-content -->
+    </article><!-- /.hentry -->
 
 
-</div><!-- /#main -->
+          </div><!-- /#main -->
 
-<div class="footer-wrapper">
-  <span> Based on <b><a href="https://github.com/mmistakes/hpstr-jekyll-theme">Jekyll
-        HPSTR theme</a></b> by 4gn3s, <i>2014</i></span>
-</div><!-- /.footer-wrapper -->
+          <div class="footer-wrapper">
+            <span> Based on <b><a href="https://github.com/mmistakes/hpstr-jekyll-theme">Jekyll
+                  HPSTR theme</a></b> by 4gn3s, <i>2014</i></span>
+          </div><!-- /.footer-wrapper -->
 
 
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-<script src="assets/js/scripts.min.js"></script>
-  </body>
-</html>
+          <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+          <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+            <script src="assets/js/scripts.min.js"></script>
+          </body>
+        </html>
