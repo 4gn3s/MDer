@@ -53,6 +53,60 @@
         <header>
             <div class="entry-meta">
                 <span class="entry-date date published updated">
+                    <time datetime="Tue Sep  2 10:34:27 2014">
+                    <a href="http://4gn3s.github.io/MDer/">Tue Sep  2 10:34:27 2014</a>
+                    </time>
+                </span>
+                <span class="author vcard">
+                    <span class="fn">
+                        <a href="http://4gn3s.github.io/MDer/about.html" title="About 4gn3s">4gn3s</a>
+                    </span>
+                </span>
+            </div><!-- /.entry-meta -->
+        </header>
+        <div class="entry-content">
+            <h1 id="title">Days 9, 10, 11</h1>
+            
+
+<h3>Usage of <strong>QVTKwidget</strong> for PCL visualization instead of writing a <em>GLWidget</em> class with VBOs. Problems:</h3>
+
+<ul>
+<li>Was using Qt5, but QVTK widget depends on Qt4 -> solution: <em>downgrade the entire project</em></li>
+<li>problems with <strong>"QWidget: Must construct a QApplication before a QPaintDevice"</strong> solved as mentioned <a href="http://www.vtk.org/Wiki/VTK/FAQ#Shared_builds_of_VTK_and_debugging_QVTKWidget_using_Visual_Studio">here</a>
+<ul>
+<li>removed VTK, Qt from the PATH</li>
+<li>added VTK in Environment section in VS</li>
+<li>VTK INSTALL is missing /debug files, so copied them manually from build folder to newly created /debug under /bin and /lib in VTK_DIR, also chaged paths in VS (added /debug)</li>
+</ul></li>
+<li>QT visualizer added as described <a href="http://pointclouds.org/documentation/tutorials/qt_visualizer.php#qt-visualizer">here</a></li>
+</ul>
+
+<h2>some TODOs</h2>
+
+<ul>
+<li>add system variables for PCL, VTK, Eigen etc. and change paths in VS under <em>additional include dirs</em> and <em>linker->input</em></li>
+<li>check if point cloud visualization actually works</li>
+<li><strong>Matcher.cpp</strong> is a mess- reorganize the whole class, implement interfaces, etc.</li>
+<li>add Optical Flow based matcher for camera tests later</li>
+<li>Start SFM:
+<ul>
+<li>camera matrices</li>
+<li>triangulation</li>
+<li>add many views: <em>solvePnp</em></li>
+<li>Bundle Adjustment (later from OpenMVG or mine)</li>
+<li>results to point cloud</li>
+<li>filter out the cloud</li>
+<li>create surface, normals etc.</li>
+</ul></li>
+</ul>
+
+        </div><!-- /.entry-content -->
+    </article><!-- /.hentry -->
+
+    <article class="hentry">
+        <header>
+            <div class="entry-meta">
+                <span class="entry-date date published updated">
                     <time datetime="Thu Aug 14 16:47:46 2014">
                     <a href="http://4gn3s.github.io/MDer/">Thu Aug 14 16:47:46 2014</a>
                     </time>
