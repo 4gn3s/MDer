@@ -22,7 +22,7 @@ def find_all_files(path):
             print(dirpath)
             date = time.ctime(os.path.getctime(dirpath + "/" + f,))
             files.append((dirpath + "/" + f, f, date))
-    return files
+    return sorted(files, key=lambda x: x[2])
 
 
 def filter_extension(files, extension):
